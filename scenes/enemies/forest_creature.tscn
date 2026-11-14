@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://ocnbc851mq5m"]
+
+[ext_resource type="Texture2D" uid="uid://dvftu047ei4t8" path="res://assets/sprites/Top_Down_Adventure_Pack_v.1.0/Top_Down_Adventure_Pack_v.1.0/Enemies_Sprites/Spider_Sprites/spider_idle_anim_all_dir_strip_4.png" id="1_cgd4b"]
+[ext_resource type="Script" uid="uid://37u4vxhu3gnc" path="res://scripts/enemies/enemy.gd" id="1_in10w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_in10w"]
+atlas = ExtResource("1_cgd4b")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w1svp"]
+atlas = ExtResource("1_cgd4b")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y54v7"]
+atlas = ExtResource("1_cgd4b")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2q3to"]
+atlas = ExtResource("1_cgd4b")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8tekh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_in10w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w1svp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y54v7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2q3to")
+}],
+"loop": 1,
+"name": &"spider_idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8tekh"]
+radius = 13.038404
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_su313"]
+radius = 84.59315
+
+[node name="ForestCreature" type="CharacterBody2D" unique_id=1975946362 groups=["enemy"]]
+texture_filter = 1
+texture_repeat = 1
+collision_layer = 4
+collision_mask = 7
+script = ExtResource("1_in10w")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2024227320]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(0, -6.999999)
+scale = Vector2(1.6875001, 1.625)
+sprite_frames = SubResource("SpriteFrames_8tekh")
+animation = &"spider_idle"
+frame_progress = 0.16430302
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=726827339]
+position = Vector2(0, -7)
+shape = SubResource("CircleShape2D_8tekh")
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=1660293228]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1119771090]
+position = Vector2(0, -7)
+shape = SubResource("CircleShape2D_su313")

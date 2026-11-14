@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://bv44j3ukcbyf3"]
+
+[ext_resource type="Script" uid="uid://cn4u4qjgtw633" path="res://scripts/objects/crystal.gd" id="1_ldj1t"]
+[ext_resource type="Texture2D" uid="uid://db3jirais7vr0" path="res://assets/sprites/Top_Down_Adventure_Pack_v.1.0/Top_Down_Adventure_Pack_v.1.0/Props_Items_(animated)/crystal_item_anim_strip_6.png" id="2_ldj1t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ldj1t"]
+atlas = ExtResource("2_ldj1t")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_poage"]
+atlas = ExtResource("2_ldj1t")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8e50l"]
+atlas = ExtResource("2_ldj1t")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yeg1p"]
+atlas = ExtResource("2_ldj1t")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_es1yo"]
+atlas = ExtResource("2_ldj1t")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1ayj"]
+atlas = ExtResource("2_ldj1t")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8tekh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ldj1t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_poage")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8e50l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yeg1p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_es1yo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e1ayj")
+}],
+"loop": 1,
+"name": &"idle_crystal",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8e50l"]
+radius = 0.49999997
+height = 0.99999994
+
+[node name="Crystal" type="Area2D" unique_id=514328733]
+texture_filter = 1
+texture_repeat = 1
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_ldj1t")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1020446516]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(0, -4)
+scale = Vector2(1.6953125, 1.6796874)
+sprite_frames = SubResource("SpriteFrames_8tekh")
+animation = &"idle_crystal"
+frame_progress = 0.64887565
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=458923879]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(0, -6.9999995)
+scale = Vector2(10, 10)
+shape = SubResource("CapsuleShape2D_8e50l")
