@@ -1,4 +1,3 @@
-
 extends CharacterBody2D
 
 signal health_changed(current_health: int, max_health: int)
@@ -18,6 +17,7 @@ var current_health: int
 
 var last_direction: String = "down"
 var is_attacking: bool = false
+var is_shielding: bool = false
 
 func _ready() -> void:
 	current_health = max_health
@@ -31,6 +31,16 @@ func _physics_process(_delta: float) -> void:
 		velocity = Vector2.ZERO
 		move_and_slide()
 		return
+
+	# Verifica se a tecla E está pressionada para defender
+	if Input.is_physical_key_pressed(KEY_E):
+		is_shielding = true
+		velocity = Vector2.ZERO
+		move_and_slide()
+		anim.play("shield_" + last_direction)
+		return
+	else:
+		is_shielding = false
 
 	if Input.is_action_just_pressed("attack"):
 		start_attack()

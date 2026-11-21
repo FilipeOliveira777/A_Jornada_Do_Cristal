@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="A_Jornada_Do_Cristal"
-run/main_scene="uid://c3ad8ia215446"
+run/main_scene="uid://doy0j2602pbwu"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

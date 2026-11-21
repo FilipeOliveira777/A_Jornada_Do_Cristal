@@ -1,38 +1,47 @@
 [gd_scene format=3 uid="uid://bv44j3ukcbyf3"]
 
 [ext_resource type="Script" uid="uid://cn4u4qjgtw633" path="res://scripts/objects/crystal.gd" id="1_ldj1t"]
-[ext_resource type="Texture2D" uid="uid://db3jirais7vr0" path="res://assets/sprites/Top_Down_Adventure_Pack_v.1.0/Top_Down_Adventure_Pack_v.1.0/Props_Items_(animated)/crystal_item_anim_strip_6.png" id="2_ldj1t"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ldj1t"]
-atlas = ExtResource("2_ldj1t")
-region = Rect2(0, 0, 16, 16)
+[ext_resource type="Texture2D" uid="uid://1sejfmeycctn" path="res://assets/sprites/Proprios/cristal_magico-pulsando-Final-2.0 (1).png" id="2_ldj1t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_poage"]
 atlas = ExtResource("2_ldj1t")
-region = Rect2(16, 0, 16, 16)
+region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8e50l"]
 atlas = ExtResource("2_ldj1t")
-region = Rect2(32, 0, 16, 16)
+region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yeg1p"]
 atlas = ExtResource("2_ldj1t")
-region = Rect2(48, 0, 16, 16)
+region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_es1yo"]
 atlas = ExtResource("2_ldj1t")
-region = Rect2(64, 0, 16, 16)
+region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e1ayj"]
 atlas = ExtResource("2_ldj1t")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ovsw"]
+atlas = ExtResource("2_ldj1t")
 region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qicc2"]
+atlas = ExtResource("2_ldj1t")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4j504"]
+atlas = ExtResource("2_ldj1t")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4pmv1"]
+atlas = ExtResource("2_ldj1t")
+region = Rect2(128, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8tekh"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ldj1t")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_poage")
 }, {
@@ -47,6 +56,18 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_e1ayj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ovsw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qicc2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4j504")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4pmv1")
 }],
 "loop": 1,
 "name": &"idle_crystal",
@@ -67,15 +88,15 @@ script = ExtResource("1_ldj1t")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1020446516]
 texture_filter = 1
 texture_repeat = 1
-position = Vector2(0, -4)
-scale = Vector2(1.6953125, 1.6796874)
+position = Vector2(-1.7812498, -5.2187495)
+scale = Vector2(1.3, 1.347)
 sprite_frames = SubResource("SpriteFrames_8tekh")
 animation = &"idle_crystal"
-frame_progress = 0.64887565
+frame_progress = 0.5303463
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=458923879]
 texture_filter = 1
 texture_repeat = 1
-position = Vector2(0, -6.9999995)
+position = Vector2(-2, -6)
 scale = Vector2(10, 10)
 shape = SubResource("CapsuleShape2D_8e50l")

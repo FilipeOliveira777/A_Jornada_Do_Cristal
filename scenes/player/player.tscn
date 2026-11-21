@@ -12,6 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://b6bu6m20yp5wn" path="res://assets/sprites/Top_Down_Adventure_Pack_v.1.0/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_run_left_anim_strip_6.png" id="6_fm80t"]
 [ext_resource type="Texture2D" uid="uid://dqiav40jkmdah" path="res://assets/sprites/Top_Down_Adventure_Pack_v.1.0/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_run_right_anim_strip_6.png" id="7_gx1jg"]
 [ext_resource type="Texture2D" uid="uid://b5cojwh2vtopt" path="res://assets/sprites/Top_Down_Adventure_Pack_v.1.0/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_run_up_anim_strip_6.png" id="8_ugbui"]
+[ext_resource type="Texture2D" uid="uid://beg6eqh0tivr2" path="res://assets/sprites/Top_Down_Adventure_Pack_v.1.0/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_shielded_static_down.png" id="13_myrg7"]
+[ext_resource type="Texture2D" uid="uid://dthdi5cqw26i7" path="res://assets/sprites/Top_Down_Adventure_Pack_v.1.0/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_shielded_static_left.png" id="14_kvlxm"]
+[ext_resource type="Texture2D" uid="uid://b3yaq4f2dkoil" path="res://assets/sprites/Top_Down_Adventure_Pack_v.1.0/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_shielded_static_right.png" id="15_uf5tr"]
+[ext_resource type="Texture2D" uid="uid://cs0rsfubin2lu" path="res://assets/sprites/Top_Down_Adventure_Pack_v.1.0/Top_Down_Adventure_Pack_v.1.0/Char_Sprites/char_shielded_static_up.png" id="16_lgqa7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_su313"]
 radius = 21.213203
@@ -581,6 +585,38 @@ animations = [{
 "loop": 0,
 "name": &"run_up",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_myrg7")
+}],
+"loop": 0,
+"name": &"shield_down",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_kvlxm")
+}],
+"loop": 0,
+"name": &"shield_left",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_uf5tr")
+}],
+"loop": 0,
+"name": &"shield_right",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_lgqa7")
+}],
+"loop": 0,
+"name": &"shield_up",
+"speed": 10.0
 }]
 
 [node name="Player" type="CharacterBody2D" unique_id=522564307 groups=["player"]]
@@ -606,4 +642,4 @@ texture_repeat = 1
 position = Vector2(1, -16.000002)
 scale = Vector2(2.5585938, 2.5078125)
 sprite_frames = SubResource("SpriteFrames_p47bc")
-animation = &"idle_down"
+animation = &"shield_right"

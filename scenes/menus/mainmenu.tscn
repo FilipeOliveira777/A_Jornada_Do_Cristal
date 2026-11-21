@@ -1,0 +1,238 @@
+[gd_scene format=3 uid="uid://doy0j2602pbwu"]
+
+[ext_resource type="Script" uid="uid://brslkv3r0rbj8" path="res://scripts/menus/main_menu.gd" id="1_buwnf"]
+[ext_resource type="Texture2D" uid="uid://duwelonjtocu" path="res://assets/images/ui/menu_background.png" id="2_ogrbc"]
+[ext_resource type="FontFile" uid="uid://c501qnl03fest" path="res://assets/fonts/PressStart2P-Regular.ttf" id="3_ffyt3"]
+[ext_resource type="Script" uid="uid://dgufuj5l1qaoj" path="res://scripts/menus/crystal_effect.gd" id="3_h388y"]
+[ext_resource type="Texture2D" uid="uid://b2e3hr6vmvolw" path="res://assets/images/ui/Cristais Mágicos Luminosos em Pixel Art.png" id="4_fffel"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_om35v"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(576, 324, 1)
+direction = Vector3(0, -1, 0)
+spread = 25.0
+initial_velocity_min = 8.0
+initial_velocity_max = 20.0
+gravity = Vector3(0, -4, 0)
+scale_max = 2.0
+color = Color(0.45882353, 0.8745098, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_37mlq"]
+bg_color = Color(0.09019608, 0.41960785, 0.2627451, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.09019608, 0.41960785, 0.2627451, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_blm1j"]
+bg_color = Color(0.0627451, 0.3019608, 0.19607843, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8392157, 0.6509804, 0.29803923, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ffyt3"]
+bg_color = Color(0.14509805, 0.5411765, 0.34509805, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.8784314, 0.6039216, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h388y"]
+bg_color = Color(0.09019608, 0.16862746, 0.27450982, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.09019608, 0.16862746, 0.27450982, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uqb0b"]
+bg_color = Color(0.0627451, 0.1254902, 0.21568628, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8392157, 0.6509804, 0.29803923, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fffel"]
+bg_color = Color(0.16078432, 0.28627452, 0.42352942, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8392157, 0.6509804, 0.29803923, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ob7il"]
+bg_color = Color(0.09019608, 0.16862746, 0.27450982, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.09019608, 0.16862746, 0.27450982, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7nmeh"]
+bg_color = Color(0.0627451, 0.1254902, 0.21568628, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8392157, 0.6509804, 0.29803923, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_23mxh"]
+bg_color = Color(0.16078432, 0.28627452, 0.42352942, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8392157, 0.6509804, 0.29803923, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="MainMenu" type="Control" unique_id=2009531098]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_buwnf")
+
+[node name="Background (TextureRect)" type="TextureRect" parent="." unique_id=1959576090]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_ogrbc")
+stretch_mode = 5
+
+[node name="DarkOverlay (ColorRect)" type="ColorRect" parent="." unique_id=1998535850]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.1764706)
+
+[node name="MagicParticles" type="GPUParticles2D" parent="." unique_id=1455885200]
+z_index = 1
+position = Vector2(592, 321)
+amount = 45
+lifetime = 5.0
+visibility_rect = Rect2(-115, -100, 206, 200)
+process_material = SubResource("ParticleProcessMaterial_om35v")
+
+[node name="CrystalEffect" type="Node2D" parent="." unique_id=874148594]
+visible = false
+script = ExtResource("3_h388y")
+
+[node name="CrystalSprite" type="Sprite2D" parent="CrystalEffect" unique_id=1805909420]
+position = Vector2(509.03952, 608.4375)
+scale = Vector2(0.09510353, 0.08874508)
+texture = ExtResource("4_fffel")
+
+[node name="CrystalLight" type="PointLight2D" parent="CrystalEffect" unique_id=1664490874]
+color = Color(0.33333334, 0.8117647, 1, 1)
+energy = 0.8
+texture_scale = 2.0
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1564874222]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuContainer_VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=597298696]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="GameTitle (Label)" type="Label" parent="CenterContainer/MenuContainer_VBoxContainer" unique_id=610740566]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.83137256, 0.46666667, 1)
+theme_override_fonts/font = ExtResource("3_ffyt3")
+theme_override_font_sizes/font_size = 24
+text = "A JORNADA DO CRISTAL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Subtitle (Label)" type="Label" parent="CenterContainer/MenuContainer_VBoxContainer" unique_id=1180115004]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8352941, 0.9098039, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "	Uma aventura além da floresta"
+horizontal_alignment = 1
+
+[node name="PlayButton" type="Button" parent="CenterContainer/MenuContainer_VBoxContainer" unique_id=890386330]
+custom_minimum_size = Vector2(260, 54)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_ffyt3")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_37mlq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_blm1j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ffyt3")
+text = "Jogar"
+
+[node name="OptionsButton" type="Button" parent="CenterContainer/MenuContainer_VBoxContainer" unique_id=99511443]
+custom_minimum_size = Vector2(260, 54)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ffyt3")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_h388y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uqb0b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fffel")
+text = "Opções"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/MenuContainer_VBoxContainer" unique_id=933088446]
+custom_minimum_size = Vector2(260, 54)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ffyt3")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_ob7il")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7nmeh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_23mxh")
+text = "Sair"
